@@ -28,7 +28,7 @@ public class ListaTareas : MonoBehaviour
     {
         if (readInput.input != null && readInput.input != "")
         {
-            AgregarTarea(readInput.input);
+            listaDeTareas.Add(readInput.input); 
             ActualizarLista();
         }
     }
@@ -37,18 +37,14 @@ public class ListaTareas : MonoBehaviour
     {
         if (readInput.input != null && readInput.input != "")
         {
-            EliminarTarea(readInput.input);
+            listaDeTareas.Remove(readInput.input);
             ActualizarLista();
         }
     }
 
-    private void AgregarTarea(string tarea)
+    public void VaciarLista()
     {
-        listaDeTareas.Add(tarea);
-    }
-
-    private void EliminarTarea(string tarea)
-    {
-        listaDeTareas.Remove(tarea);
+        listaDeTareas.Clear();
+        ActualizarLista();
     }
 }

@@ -38,6 +38,7 @@ public class Calculator : MonoBehaviour
         catch (Exception)
         {
             currentInput = "Error";
+            UpdateDisplay();
         }
     }
 

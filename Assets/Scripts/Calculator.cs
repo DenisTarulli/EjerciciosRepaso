@@ -39,6 +39,7 @@ public class Calculator : MonoBehaviour
         {
             currentInput = "Error";
             UpdateDisplay();
+            currentInput = "";
         }
     }
 
